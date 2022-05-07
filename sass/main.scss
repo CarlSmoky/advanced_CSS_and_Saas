@@ -13,6 +13,7 @@ $color_primary-dark: #ffddd2;
 
 $color_grey-dark: #777;
 $color_white: #fff;
+$color_black: #000;
 
 *,
 *::after,
@@ -49,29 +50,31 @@ body {
   position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+  &__logo {
+    height: 3.5rem;
+  }
+  
+  &__logo:hover {
+    animation: rotate 2s ease-out;
+  }
+  
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+ 
 
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__logo:hover {
-  animation: rotate 2s ease-out;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 .heading-primary {
   color: $color_white;
   text-transform: uppercase;
@@ -186,12 +189,12 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba($color_black, 0.2);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 .5rem 1rem rgba($color_black, 0.2);
 }
 
 .btn--white {
