@@ -174,62 +174,62 @@ body {
     transform: rotate(360deg);
   }
 }
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 1.5rem 4rem;
-  border-radius: 10rem;
-  transition: all .2s;
-  position: relative;
-  font-size: 1.6rem;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba($color_black, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 .5rem 1rem rgba($color_black, 0.2);
-}
-
-.btn--white {
-  background-color: $color_white;
-  color: $color_grey-dark;
-}
-
-/* content and display have to be written for pseudo */
-.btn::after {
-  content: ""; 
-  display: inline-block;
-  /* same as parent element height and width */
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  /* put in the same position as parent */
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* put behind of the parent */
-  z-index: -1;
-  transition: all 1s;
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+  }
   
-}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color_black, 0.2);
 
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn--animated {
-  animation: moveInBottom 5s ease-out 0.75s;
-  animation-fill-mode: backwards;
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color_black, 0.2);
+  }
+  
+  &--white {
+    background-color: $color_white;
+    color: $color_grey-dark;
+    &::after {
+      background-color: #fff;
+    }
+  }
+  
+  /* content and display have to be written for pseudo */
+  &::after {
+    content: ""; 
+    display: inline-block;
+    /* same as parent element height and width */
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    /* put in the same position as parent */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* put behind of the parent */
+    z-index: -1;
+    transition: all 1s;
+    
+  }
+  
+  &--animated {
+    animation: moveInBottom 5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }

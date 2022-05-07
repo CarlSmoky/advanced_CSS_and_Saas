@@ -112,52 +112,45 @@ body {
     opacity: 1;
     transform: rotate(360deg); } }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 1.5rem 4rem;
-  border-radius: 10rem;
-  transition: all .2s;
-  position: relative;
-  font-size: 1.6rem; }
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-
-/* content and display have to be written for pseudo */
-.btn::after {
-  content: "";
-  display: inline-block;
-  /* same as parent element height and width */
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  /* put in the same position as parent */
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* put behind of the parent */
-  z-index: -1;
-  transition: all 1s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
-
-.btn--animated {
-  animation: moveInBottom 5s ease-out 0.75s;
-  animation-fill-mode: backwards; }
+.btn {
+  /* content and display have to be written for pseudo */ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem; }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    /* same as parent element height and width */
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    /* put in the same position as parent */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* put behind of the parent */
+    z-index: -1;
+    transition: all 1s; }
+  .btn--animated {
+    animation: moveInBottom 5s ease-out 0.75s;
+    animation-fill-mode: backwards; }
