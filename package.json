@@ -1,0 +1,22 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlSmoky/advanced_CSS_and_Saas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlSmoky/advanced_CSS_and_Saas/issues"
+  },
+  "homepage": "https://github.com/CarlSmoky/advanced_CSS_and_Saas#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
