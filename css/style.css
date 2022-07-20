@@ -521,7 +521,7 @@ body {
 }
 .story__img {
   height: 100%;
-  transform: translateX(-4rem) scale(1.2);
+  transform: translateX(-4rem) scale(1.4);
   backface-visibility: hidden;
   transition: all 0.5s;
 }
@@ -603,6 +603,23 @@ body {
 .section-stories {
   padding: 15rem 0;
   position: relative;
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #006d77, #83c5be);
+}
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  height: 50rem;
+}
+.book__form {
+  width: 50%;
+  padding: 6rem;
 }
 
 .row {
