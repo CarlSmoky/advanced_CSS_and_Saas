@@ -12,6 +12,7 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($color-black, .1);
   }
 
   &__backgroud {
@@ -23,8 +24,9 @@
     right: 6.5rem;
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 1000;
+    transition: transform .8s cubic-bezier(0.65, 0, 0.35, 1);
 
-    transform: scale(80);
+    // transform: scale(80);
   }
 
   &__nav {
@@ -34,16 +36,21 @@
     top: 0;
     right: 0;
     z-index: 1500;
-    ;
+
+    opacity: 0;
+    width: 0;
+    transition: all .8s;
   }
 
   &__list {
     @include center-holizontal-verticle;
+    width: 100%;
   }
 
   &__item {}
 
   &__link {
+
     &:link,
     &:visited {
       display: inline-block;
@@ -68,7 +75,16 @@
       background-position: 100%;
       color: $color-primary;
       transform: translateX(1rem);
-
     }
+  }
+
+  //FUNCTIONALITY
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
   }
 }
